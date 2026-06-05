@@ -217,7 +217,7 @@ async def causal_dag_infer(
     name="explain-causal-evidence",
     description=(
         "Given a previously-produced CausalEvidence envelope, produce a "
-        "plain-English paragraph (Opus 4.7 translator; offline fallback "
+        "plain-English paragraph (Claude translator; offline fallback "
         "when ANTHROPIC_API_KEY is unset). Use as the final step of any "
         "causal tool chain so the agent cites ready-made narrative."
     ),

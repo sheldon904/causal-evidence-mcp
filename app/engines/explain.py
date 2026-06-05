@@ -1,5 +1,5 @@
 """
-Opus 4.7 narrative translator.
+Claude narrative translator.
 
 Given a previously-produced ``CausalEvidenceEnvelope`` (from any other
 endpoint), asks Claude to produce a plain-English paragraph the calling
@@ -27,7 +27,7 @@ import os
 
 from app.schemas import CausalEvidenceEnvelope, ExplainInput
 
-_ENGINE_VERSION = "anthropic-opus-4-7"
+_ENGINE_VERSION = "anthropic-opus-4-8"
 
 # System prompt deliberately verbose — it establishes vocabulary + constraints
 # and is stable across requests, so prompt caching pays off.
@@ -71,7 +71,7 @@ async def explain_causal_evidence(inp: ExplainInput) -> CausalEvidenceEnvelope:
         "Write the paragraph now."
     )
 
-    model = os.getenv("CLAUDE_EXPLAINER_MODEL", "claude-opus-4-7").strip()
+    model = os.getenv("CLAUDE_EXPLAINER_MODEL", "claude-opus-4-8").strip()
     response = await client.messages.create(
         model=model,
         max_tokens=inp.max_tokens,
