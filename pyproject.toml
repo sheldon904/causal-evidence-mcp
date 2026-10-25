@@ -8,7 +8,7 @@ readme = "README.md"
 
 dependencies = [
     # HTTP layer
-    "fastapi>=0.115,<0.116",
+    "fastapi>=0.133,<0.134",
     "uvicorn[standard]>=0.32,<0.33",
     "pydantic>=2.8,<3",
     "httpx>=0.27,<0.28",
@@ -37,7 +37,7 @@ dependencies = [
     # MCP server — exposes the 6 causal endpoints as MCP tools so a calling
     # agent can use them alongside its native tools. `[cli]` brings in the
     # dev CLI + SSE transport support.
-    "mcp[cli]>=1.2,<2",
+    "mcp[cli]>=1.30,<2",
 ]
 
 [project.optional-dependencies]
